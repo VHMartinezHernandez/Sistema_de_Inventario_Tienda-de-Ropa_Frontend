@@ -1,0 +1,75 @@
+<div class="container mt-4">
+  <div class="container text-center mb-4">
+    <h3>Agregar Producto</h3>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <div class="p-4" 
+           style="background-image: linear-gradient(135deg, #dbe5ff, #c4d1ff); 
+                  border-radius: 8px; 
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="descripcion" class="form-label">Descripción del producto</label>
+              <input type="text" class="form-control" id="descripcion" name="descripcion" required [(ngModel)]="producto.descripcion">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="categoria" class="form-label">Categoría</label>
+              <select class="form-control" id="categoria" name="categoria" required [(ngModel)]="producto.categoria">
+                <option value="" disabled selected>Seleccione una categoría</option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="talla" class="form-label">Talla</label>
+              <select class="form-control" id="talla" name="talla" required [(ngModel)]="producto.talla">
+                <option value="" disabled selected>Seleccione una talla</option>
+                <option value="Extra Small (XS)">Extra Small (XS)</option>
+                <option value="Small (S)">Small (S)</option>
+                <option value="Medium (M)">Medium (M)</option>
+                <option value="Large (L)">Large (L)</option>
+                <option value="Extra Large (XL)">Extra Large (XL)</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="color" class="form-label">Color</label>
+              <input type="text" class="form-control" id="color" name="color" required [(ngModel)]="producto.color">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input type="number" step="any" class="form-control" id="precio" name="precio" required [(ngModel)]="producto.precio">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="existencia" class="form-label">Existencia</label>
+              <input type="number" class="form-control" id="existencia" name="existencia" required [(ngModel)]="producto.existencia">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="marca" class="form-label">Marca</label>
+              <input type="text" class="form-control" id="marca" name="marca" required [(ngModel)]="producto.marca">
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-warning btn-sm me-3">Submit</button>
+            <a href="/" class="btn btn-danger btn-sm">Regresar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

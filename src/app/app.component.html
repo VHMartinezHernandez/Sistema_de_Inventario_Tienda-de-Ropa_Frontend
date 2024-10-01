@@ -1,0 +1,26 @@
+<div class="container">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark"
+       style="background-image: linear-gradient(135deg, #3b5998, #1c2d5c); background-color: #3b5998; border-radius: 10px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="productos">Tienda de Ropa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto"> <!-- Alinea otros elementos a la izquierda -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="productos" routerLinkActive="active">Inicio</a>
+          </li>
+        </ul>
+        <a class="btn btn-warning btn-sm ms-auto" routerLink="agregar-producto">Agregar Producto</a> <!-- Botón alineado a la derecha -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal donde se muestran los componentes cargados por router-outlet -->
+  <div class="container mt-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
